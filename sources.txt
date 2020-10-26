@@ -1,0 +1,27 @@
+API:
+
+
+Weather Icons:
+    https://www.iconfinder.com/iconsets/weather-flat-14
+
+weather info:
+https://blog.weatherops.com/the-role-of-weather-and-weather-forecasting-in-agriculture
+
+
+
+
+researches:
+
+https://www.researchgate.net/figure/Different-data-mining-techniques-applied-in-crop-yield-prediction_tbl1_329467349
+
+sample api call
+https://samples.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22
+
+
+crop details - https://www.hunker.com/
+https://www.farmersweekly.co.za/
+
+
+
+fertilizer details:
+https://fieldcrops.cals.cornell.edu/

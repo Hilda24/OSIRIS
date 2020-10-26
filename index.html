@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+	<title>Farmer Friend</title>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300|Rajdhani:700&display=swap" rel="stylesheet">
+
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="images/logo.png"/>
+</head>
+
+
+<body>
+	
+	<div id="google_translate_element"></div>
+
+	<script type="text/javascript">
+	function googleTranslateElementInit() {
+	  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+	}
+	</script>
+	
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+
+
+	<div class="site-content">
+		
+
+		<div class="container p-3 text-center">
+			<img src="images/logo@2x.png" alt="" class="logo">
+			<h1 class="title-font"><strong>Osiris</strong></h1>
+			<h2 class="thin-font">One stop solution for Farmers</h2>
+		</div>
+
+		<div class="site-header">
+			<div class="container p-0">
+				<!--<a href="index.html" class="branding">
+					<img src="images/logo.png" alt="" class="logo">
+					<div class="logo-type">
+						<h1 class="site-title">Osiris</h1>
+						<small class="site-description">Farmer's companion</small>
+					</div>
+				</a>-->
+
+				<!-- Default snippet for navigation -->
+				<div class="main-navigation">
+					<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+					<ul class="menu">
+						<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+						<li class="menu-item"><a href="advanced.html">Accurate Suggestion</a></li>
+						<li class="menu-item"><a href="fertilizer.html">Fertilizer</a></li>
+						<li class="menu-item"><a href="pest.html">Pest Guidance</a></li>
+						<li class="menu-item"><a href="diseases.html">Plant diseases</a></li>
+						<li class="menu-item"><a href="loan.html">Loan</a></li>
+						<li class="menu-item"><a href="statistics.html">Crop statistics</a></li>
+						<li class="menu-item"><a href="helpline.html">Helpline</a></li>
+						<li class="menu-item"><a href="weather.html">Weather</a></li>
+							
+					</ul> <!-- .menu -->
+				</div> <!-- .main-navigation -->
+
+				<div class="mobile-navigation"></div>
+
+			</div>
+		</div> <!-- .site-header -->
+
+		<div class="hero" data-bg-image="images/farmer1.jpg">
+			<div class="container">
+				<h3 style="color: #111;">
+					ENTER LONGITUDE AND LATITUDE OR CLICK FIND TO FIND YOUR LOCATION FOR SUGGESTING CROPS
+				</h3>
+				<form action="#" id="frm" class="find-location">
+
+					
+					<input type="text" placeholder="longitude" id="lon">
+					<br><br>
+					<input type="text" placeholder="latitude" id="lat">
+					<br>
+					<input type="submit" value="Find">
+				</form>
+
+			</div>
+		</div>
+		<br>
+	</div>
+
+
+	<div id="box1">
+
+		<div class="forecast-table">
+			<div class="container">
+				<div class="forecast-container">
+					<div class="today forecast">
+						<div class="forecast-header">
+							<div class="day">Weather</div>
+
+						</div> <!-- .forecast-header -->
+						<div class="forecast-content">
+							<div class="location" id="cityName"></div>
+							<div class="degree">
+								<div class="num" id="temperature"></div>
+								<div class="forecast-icon">
+
+								</div>
+							</div>
+							<span><img src="images/icon-umberella.png" alt="">20%</span>
+							<span><img src="images/icon-wind.png" alt=""><span id="wind"></span></span>
+							<span><img src="images/icon-compass.png" alt="">East</span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+	<div id="box2">
+
+	<main class="main-content">
+		<div class="fullwidth-block">
+			<div class="container">
+		
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="section-title">Map View</h2>
+						
+						<div id="map1" style="width: 100%;height: 400px;"></div>
+  
+
+					</div>
+					<div class="col-md-6 plant-details">
+						<h2 class="section-title">Suggested crops</h2>
+						<a href="advanced.html"><h4>Click Here For more Accurate Suggestion <img src="images/arrow.png" alt="-->"></h4></a>
+						<br>
+						<div class="dropdown">
+							<button class="dropbtn">Select the soil type: 
+								
+							</button>
+							<div class="dropdown-content dropdown-type" id="soilid">
+
+								<p>Alluvial soil</p>
+								<p>Red soil</p>
+								<p>Sandy loam</p>
+								<p>Black soil</p>
+								<p>Clay loam</p>
+								<p>Laterite soil</p>
+								<p>Arid soil</p>
+								
+							</div>
+						</div>
+						
+							
+						
+						<div class="row greybox crops" id="crop1">
+
+							<div class="card">
+    <div class="card-header" id="cropOne">
+      
+        <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="col-sm-6" id="crop-img1">
+			  <img src="crops/corn.png" alt="Corn" height="150" width="100">
+		  </div>
+		<div class="col-sm-6">
+			<div class="row" id="crop-name1">
+				<h1>Corn</h1>
+			</div>
+			<div class="row">
+				<h3>60-100days</h3>
+			</div>
+			<div class="row">
+				<h5>Click for more info...</h5>
+			</div>
+			
+		</div>
+
+        </div>
+      
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="cropOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>Once in a week</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Varieties</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>Oranental flint and dent corn</h5>
+					<h5>Varigated Sweet or miniature varieties</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Seed cost</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>400/acre</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>6000kg</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>8-10 ton of Organic manure(FYM)</h5>
+					<h5>Nitrogen content:48-60/kg</h5>
+					<h5>Phosphorus content:16-24/kg</h5>
+					<h5>Potassium content:12-16/kg</h5>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.5 to 7.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>20-100 cm</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Shoot fly,Aphids</a></h5>
+					<h5><a href="#">Cut worms, stemborer</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Simazine</a></h5>
+					<h5><a href="#"></a>Atrazine at 0.5 kg/ha</h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+
+							
+						</div>
+						
+						<div class="row greybox crops" id="crop2">
+							<div class="card">
+    <div class="card-header" id="cropTwo">
+      
+        <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <div class="col-sm-6" id="crop-img2"><img src="crops/rice.png" alt="Rice" height="150" width="100"></div>
+	  <div class="col-sm-6">
+		<div class="row" id="crop-name2">
+			<h1>Rice</h1>
+		</div>
+		<div class="row">
+			<h3 id="2"></h3>
+		</div>
+		<div class="row">
+			<h5>Click for more info...</h5>
+		</div>
+		</div>
+	</div>
+    </div>
+
+    <div id="collapseTwo" class="collapse show" aria-labelledby="cropTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>300ml</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Varieties</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>Aman, Sali, Afghani, Aus, Boro, Palua</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost per Bag</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>50-60 INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>1750kg of paddy ( 1000kg of rice )</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>5 ton of FYM</h5>
+					<h5>18kg urea per acre</h5>
+					<h5>75kg superphosphate</h5>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.0 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>150 cm</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Pink Stemborer</a></h5>
+					<h5><a href="#">Yellow stemborer</a></h5>
+					<h5><a href="#">Brown Plant hopper</a></h5>
+				</div>
+				<div class="col-sm-6  p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Bioagents</a></h5>
+					<h5><a href="#">Atrazine at 0.5kg/ha</a></h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+
+							
+						</div>
+
+						<div class="row greybox crops" id="crop3">
+
+							<div class="card">
+    <div class="card-header" id="cropThree">
+      
+        <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+     <div class="col-sm-6" id="crop-img3"><img src="crops/wheat.png" alt="wheat" height="150" width="100"></div>
+	 <div class="col-sm-6">
+		<div class="row" id="crop-name3">
+			<h1>Wheat</h1>
+		</div>
+		<div class="row">
+			<h3></h3>
+		</div>
+		<div class="row">
+			<h5>Click for more info...</h5>
+		</div>
+		</div>
+        </div>
+      
+    </div>
+
+    <div id="collapseThree" class="collapse show" aria-labelledby="cropThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>300ml</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost per Bag</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>50-60 INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>1750kg of paddy ( 1000kg of rice )</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>NPK ratio: 100:150:40 kg per acre</h5>
+					<h5>4-6 ton of FYM</h5>
+					
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.0 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>xxx</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Cereal cyst nematode</a></h5>
+					<h5><a href="#">Army worm </a></h5>
+					<h5><a href="#">Termites</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">10-40% of Khurpi</a></h5>
+					<h5><a href="#">hoe</a></h5>
+					<h5><a href="#">2,4-D Herbicide</a></h5>
+
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+
+						</div>
+
+						<div class="row greybox crops" id="crop4">
+							<div class="card">
+    <div class="card-header" id="cropFour">
+      
+        <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+      <div class="col-sm-6" id="crop-img4"><img src="crops/sugarcane.jpg" alt="sugarcane" height="150" width="100"></div>
+	  <div class="col-sm-6">
+		<div class="row" id="crop-name4">
+			<h1>SugarCane</h1>
+		</div>
+		<div class="row">
+			<h3>12-16 months</h3>
+		</div>
+		<div class="row">
+			<h5>Click for more info...</h5>
+		</div>
+		</div>
+        </div>
+      
+    </div>
+
+    <div id="collapseFour" class="collapse show" aria-labelledby="cropFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>60-70 tons/ha</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Seed rate</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>75000 two-budded sets/ha</h5> 
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per hectare</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>76 tons of cane</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>12.5t/ha of Organic manure</h5>
+					<h5>25t/ha of compost</h5>
+					<h5>37.5t/ha of filter press mud</h2>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>4.5 to 9.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>100-175cm</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Root Rubs</a></h5>
+					<h5><a href="#">Termites</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Oxyflurofen 750ml/ha</a></h5>
+					<h5><a href="#">2,4-D Sodium salt</a></h5>
+					<h5><a href=""#>EPN or Galleria or Corcyna</a></h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+						</div>
+
+						<div class="row greybox crops" id="crop5">
+
+									 <div class="card">
+    <div class="card-header" id="cropFive">
+      
+        <div data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          <div class="col-sm-6" id="crop-img5"><img src="crops/peas.jpg" alt="Peas" height="150" width="100"></div>
+		  <div class="col-sm-6">
+			<div class="row" id="crop-name5">
+				<h1>Peas</h1>
+			</div>
+			<div class="row">
+				<h3>2-3 months</h3>
+			</div>
+			<div class="row">
+				<h5>Click for more info...</h5>
+			</div>
+			</div>
+        </div>
+      
+    </div>
+
+    <div id="collapseFive" class="collapse show" aria-labelledby="cropFive" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>once in 9-12 months</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost after production</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>70-90INR INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Seed Cost</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>2500/acre</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5></h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5> Organicrooten well farm yard manure</h5>
+					<h5>NPK ratio:60:70:70</h5>
+					<h5>30-60 Quintals based on varieties</h2>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>6.0 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>500mm</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Aphids</a></h5>
+					<h5><a href="#">Pod borer</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Bio agents like T. Chilonisin</a></h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+
+						</div>
+
+						<div class="row greybox crops" id="crop6">
+							
+
+
+							 <div class="card">
+    <div class="card-header" id="cropSix">
+      
+        <div data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+          <div class="col-sm-6" id="crop-img6">
+			  <img src="crops/seasame.jpg" alt="Sesame" height="150" width="100">
+		  </div>
+		  <div class="col-sm-6">
+			  <div class="row" id="crop-name6">
+					<h1>Sesame</h1>
+			  </div>
+			<div class="row">
+					<h3></h3>
+				</div>
+			<div class="row">
+				<h3>Click for more info..</h3>
+			</div>
+		</div>
+        </div>
+      
+    </div>
+
+    <div id="collapseSix" class="collapse show" aria-labelledby="cropSix" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>300ml</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost per Bag</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>50-60 INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost after production</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>50-60 INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>1750kg of paddy ( 1000kg of rice )</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>5 ton of Organic manure</h5>
+					<h5>18 kg of uera/acre</h5>
+					<h5>75 kg of super phosphate</h2>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.0 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.0 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Brown plant hopper</a></h5>
+					<h5><a href="#">Pink-yellow, white stemborer</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Bio agents like T. Chilonisin</a></h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+						</div>
+
+						<div class="row greybox crops" id="cotton">
+							
+
+
+							 <div class="card">
+    <div class="card-header" id="crop-cotton">
+      
+        <div data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+          <div class="col-sm-6" id="cottom-img"><img src="crops/cotton.png" alt="Peas" height="150" width="100"></div>
+				<div class="col-sm-6">
+						<div class="row" id="cotton-name">
+							  <h1>Cotton</h1>
+						</div>
+					  <div class="row">
+							  <h3>6-8months</h3>
+						  </div>
+						  <div class="row">
+							  <h3>Click for more info..</h3>
+						  </div>
+				  </div>
+
+        </div>
+      
+    </div>
+
+    <div id="collapseSeven" class="collapse show" aria-labelledby="crop-cotton" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="table">
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Watering</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>500mm between germination and boll formation</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Cost per Bag</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>50-100 INR</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Yield per acre</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>2-4 tons </h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4"><h5>
+					Fertilizer needed
+				</h5></div>
+				<div class="col-sm-8">
+					<h5>12-15 tons of Organic manure/ha</h5>
+					<h5>NPK ratio:100:50:50kg/ha</h5>
+					
+				</div>
+			</div>
+			
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>ph</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>5.8 to 8.0</h5>
+				</div>
+			</div>
+			<div class="row text-left border-b">
+				<div class="col-sm-4">
+					<h5>Rainfall required</h5>
+				</div>
+				<div class="col-sm-8">
+					<h5>60-100cm</h5>
+				</div>
+			</div>
+			<div class="row text-left">
+				<div class="col-sm-6 border-r">
+					<h5>Possible pests</h5>
+					<h5><a href="#">Boll worm</a></h5>
+					<h5><a href="#">Thrips,Aphids</a></h5>
+					<h5><a href="#">Plant and Stink Bugs</a></h5>
+				</div>
+				<div class="col-sm-6 p-1">
+					<h5>Pest Control</h5>
+					<h5><a href="#">Aldicarb</a></h5>
+					<h5><a href="#">Phorate</a></h5>
+					<h5><a href="#">Endosulfan</a></h5>
+				</div>
+			</div>
+			
+
+		</div>
+      </div>
+    </div>
+  </div>
+						</div>
+
+						<div class="row greybox crops" id="lemon">
+							
+
+
+								<div class="card">
+	   <div class="card-header" id="crop-lemon">
+		 
+		   <div data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+			 <div class="col-sm-6" id="lemon-img"><img src="crops/lemon.jpg" alt="Peas" height="150" width="100"></div>
+			 
+					<div class="col-sm-6">
+							<div class="row" id="lemon-name">
+								  <h1>Lemon</h1>
+							</div>
+						  <div class="row">
+								  <h3 id="lemon-period"></h3>
+							  </div>
+							  <div class="row">
+								  <h3>Click for more info..</h3>
+							  </div>
+					  </div>
+   
+		
+		   </div>
+		 
+	   </div>
+   
+	   <div id="collapseEight" class="collapse show" aria-labelledby="crop-lemon" data-parent="#accordionExample">
+		 <div class="card-body">
+		   <div class="table">
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4">
+					   <h5>Watering</h5>
+				   </div>
+				   <div class="col-sm-8">
+					   <h5>1 cup/month</h5>
+				   </div>
+				   <div class="row text-left border-b">
+						<div class="col-sm-4">
+							<h5>Preferred Irrigation</h5>
+						</div>
+						<div class="col-sm-8">
+							<h5>Drip Irrigation(No Spraying)</h5>
+						</div>
+			   </div>
+			   <div class="row text-left border-b">
+					<div class="col-sm-4">
+						<h5>Climate</h5>
+					</div>
+					<div class="col-sm-8">
+						<h5>Sunny Climate</h5>
+					</div>
+				</div>
+				<div class="row text-left border-b">
+						<div class="col-sm-4">
+							<h5>Cost of Seed</h5>
+						</div>
+						<div class="col-sm-8">
+							<h5>500 per kg</h5>
+						</div>
+					</div>
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4">
+					   <h5>Cost after production</h5>
+				   </div>
+				   <div class="col-sm-8">
+					   <h5>70 INR</h5>
+				   </div>
+			   </div>
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4">
+					   <h5>Yield per tree</h5>
+				   </div>
+				   <div class="col-sm-8">
+					   <h5>1000-1500 Fruits</h5>
+				   </div>
+			   </div>
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4"><h5>
+					   Fertilizer needed
+				   </h5></div>
+				   <div class="col-sm-8">
+					  
+					   <h5>15-20 kg of FYM</h5>
+					   <h5>500 kg of super phosphate</h2>
+					   
+				   </div>
+			   </div>
+			   
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4">
+					   <h5>ph</h5>
+				   </div>
+				   <div class="col-sm-8">
+					   <h5>5.5 to 7.0</h5>
+				   </div>
+			   </div>
+			   <div class="row text-left border-b">
+				   <div class="col-sm-4">
+					   <h5>Rainfall required</h5>
+				   </div>
+				   <div class="col-sm-8">
+					   <h5> 250-330 cm per annum(Moderate Rainfall)</h5>
+				   </div>
+			   </div>
+			   <div class="row text-left">
+				   <div class="col-sm-6 border-r">
+					   <h5>Possible pests</h5>
+					   <h5><a href="#">Citrus pysilla</a></h5>
+					   <h5><a href="#">Citrus Canker, Trunkborer</a></h5>
+					   <h5><a href="#">Anthracnose</a></h5>
+				   </div>
+				   <div class="col-sm-6 p-1">
+					   <h5>Pest Control</h5>
+					   <h5><a href="#">Quinalphos 1.0ml</a></h5>
+					   <h5><a href="#">Acephate 1.0g</a></h5>
+				   </div>
+			   </div>
+			   
+   
+		   </div>
+		 </div>
+	   </div>
+	 </div>
+						   </div>
+				
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</main> <!-- .main-content -->
+
+</div>
+	
+</div>
+	
+
+<!--   <footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</footer>  -->
+
+
+	
+	</div>
+
+
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/weather.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDWTjoVliAC5-hbzZpYI6JjcohKq84HhQ&callback=initMap">
+	</script>
+  
+
+	
+
+
+	
+</body>
+
+</html>
